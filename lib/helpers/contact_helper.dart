@@ -31,7 +31,7 @@ class ContactHelper{ //usando o padrão de projeto singleton para evitar que o o
 
   Future<Database> initDb() async {
     final databasePath = await getDatabasesPath();
-    final path = join(databasePath, "contacts.db");
+    final path = join(databasePath, "contactsnew.db");
 
     return await openDatabase(path, version: 1, onCreate: (Database db, int newerVersion) async{//será realizado apenas na primeira vez para iniciar o banco
       await db.execute(
